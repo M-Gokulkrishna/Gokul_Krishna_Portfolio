@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@import "./GokUI/Utility.css";
+@import "./GokUI/Animation.css";
+ 
+/*  */
+@theme {
+    --breakpoint-sm: 700px;
+}
+
+/*  */
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.Main-layout {
+    background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 11px, rgba(255, 255, 255, 0.04) 11px, rgba(255, 255, 255, 0.04) 19px, transparent 19px, transparent 29px, rgba(255, 255, 255, 0.04) 29px, rgba(255, 255, 255, 0.04) 33px), repeating-radial-gradient(circle at center center, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 47px);
+    background-size: 53px 53px;
+
+    header {
+        box-shadow: 0 0 100px rgba(255, 255, 0, 0.3);
+        background-color: transparent;
+        backdrop-filter: blur(4px);
+
+        ol {
+            background-image: repeating-radial-gradient(circle at center center, transparent 0px, transparent 11px, rgba(255, 255, 255, 0.04) 11px, rgba(255, 255, 255, 0.04) 19px, transparent 19px, transparent 29px, rgba(255, 255, 255, 0.04) 29px, rgba(255, 255, 255, 0.04) 33px), repeating-radial-gradient(circle at center center, rgb(0, 0, 0) 0px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 5px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 17px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 30px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 43px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 45px, rgb(0, 0, 0) 47px);
+            background-size: 53px 53px;
+        }
+    }
+}
+
+[data-animation="Text-Typing-Effect"] {
+    @apply w-[45px] h-auto text-nowrap overflow-x-hidden border-r-3 border-amber-200;
+    animation: Text-Typing-animation 3s steps(90) infinite;
+}
+
+.skills-meterTag::before {
+    content: "";
+    @apply absolute z-[98] h-full top-0 left-0 rounded-full bg-cyan-400;
+}
+
+.skills-meterTag.meter-10::before {
+    @apply w-[10%];
+}
+
+.skills-meterTag.meter-20::before {
+    @apply w-[20%];
+}
+
+.skills-meterTag.meter-30::before {
+    @apply w-[30%];
+}
+
+.skills-meterTag.meter-40::before {
+    @apply w-[40%];
+}
+
+.skills-meterTag.meter-50::before {
+    @apply w-[50%];
+}
+
+.skills-meterTag.meter-60::before {
+    @apply w-[60%];
+}
+
+.skills-meterTag.meter-70::before {
+    @apply w-[70%];
+}
+
+.skills-meterTag.meter-80::before {
+    @apply w-[80%];
+}
+
+.skills-meterTag.meter-90::before {
+    @apply w-[90%];
+}
+
+.skills-meterTag.meter-100::before {
+    @apply w-[100%];
+}
+
+.contactPage-Container {
+    background-image: url("./assets/Images/Contact_Section.png");
+    background-position: center;
+
+    form {
+        background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(255, 255, 0, 0.8) 60%);
+    }
+}
+
+@media (width>700px) {
+    .Portfolio-Navbar {
+        ol>li::before {
+            content: "";
+            @apply absolute bottom-0 left-[50%] translate-[-50%] w-0 h-[3px] rounded-full z-[99] transition-all duration-350 bg-amber-300;
+        }
+
+        ol>li:hover::before {
+            @apply w-full;
+        }
+    }
+}
+
+@keyframes Text-Typing-animation {
+    100% {
+        width: 300px;
+    }
+}

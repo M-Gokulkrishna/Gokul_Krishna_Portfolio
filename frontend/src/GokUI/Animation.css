@@ -1,0 +1,256 @@
+:root {
+    --gokAOS-Duration: 1.2s;
+    --gokAOS-Delay: 0.01s;
+}
+/*  */
+/* fade animations */
+[data-animation="fade-up"] {
+    opacity: 0;
+    transform: translateY(50%);
+    animation: fade-up var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="fade-down"] {
+    opacity: 0;
+    transform: translateY(-50%);
+    animation: fade-down var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="fade-right"] {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: fade-right var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="fade-left"] {
+    opacity: 0;
+    transform: translateX(50%);
+    animation: fade-left var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+/*  */
+@keyframes fade-up {
+    50% {
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-down {
+    50% {
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-right {
+    50% {
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-left {
+    50% {
+        transform: translateX(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*  */
+/* zoom-in animations */
+[data-animation="zoom-in"] {
+    opacity: 0;
+    scale: 0.2;
+    animation: zoom-in var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-in-up"] {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateY(80%);
+    animation: zoom-in-up var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-in-down"] {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateY(-80%);
+    animation: zoom-in-down var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-in-right"] {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateX(-80%);
+    animation: zoom-in-right var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-in-left"] {
+    opacity: 0;
+    scale: 0.2;
+    transform: translateX(80%);
+    animation: zoom-in-left var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+/*  */
+@keyframes zoom-in {
+    50% {
+        scale: 1.05;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes zoom-in-up {
+    50% {
+        scale: 1.05;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in-down {
+    50% {
+        scale: 1.05;
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-in-right {
+    50% {
+        scale: 1.05;
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-in-left {
+    50% {
+        scale: 1.05;
+        transform: translateX(-5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+/*  */
+/* zoom-in animations */
+[data-animation="zoom-out"] {
+    opacity: 0;
+    scale: 1.2;
+    animation: zoom-out var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-out-up"] {
+    opacity: 0;
+    scale: 1.2;
+    transform: translateY(80%);
+    animation: zoom-out-up var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-out-down"] {
+    opacity: 0;
+    scale: 1.2;
+    transform: translateY(-80%);
+    animation: zoom-out-down var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-out-right"] {
+    opacity: 0;
+    scale: 1.2;
+    transform: translateX(-80%);
+    animation: zoom-out-right var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+
+[data-animation="zoom-out-left"] {
+    opacity: 0;
+    scale: 1.2;
+    transform: translateX(80%);
+    animation: zoom-out-left var(--gokAOS-Duration) ease var(--gokAOS-Delay) 1 forwards;
+}
+/*  */
+@keyframes zoom-out {
+    50% {
+        scale: 0.95;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes zoom-out-up {
+    50% {
+        scale: 0.95;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-out-down {
+    50% {
+        scale: 0.95;
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoom-out-right {
+    50% {
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-out-left {
+    50% {
+        scale: 0.95;
+        transform: translateX(-5%);
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+        transform: translateX(0);
+    }
+}
+/*  */
+/* filp animations */

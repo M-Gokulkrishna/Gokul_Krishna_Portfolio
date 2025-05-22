@@ -1,0 +1,535 @@
+@theme {
+    --color-springgreen-500: springgreen;
+}
+/* .gokUI-inputTag type1 */
+.gokUI-inputTag.type1 {
+    @apply relative w-[min(300px,100%)] min-w-[280px] min-h-10 max-h-15 flex items-center tracking-wider rounded-full font-semibold;
+
+    span {
+        @apply absolute left-4 z-10 text-neutral-500 mt-0.5;
+    }
+
+    input {
+        @apply w-full h-full pe-4 border-3 border-neutral-500 outline-0 rounded-full indent-12 text-neutral-700 bg-stone-100 opacity-90;
+    }
+
+    label {
+        @apply absolute z-10 left-12 top-[50%] bg-transparent text-neutral-500 cursor-pointer;
+        transform: translate(0%, -50%);
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        transition: all 0.4s;
+        @apply scale-80 text-sm -top-0.5 left-5 bg-neutral-500 text-stone-50 px-2.5 rounded-full;
+    }
+}
+/* .gokUI-inputTag type2 */
+.gokUI-inputTag.type2 {
+    @apply relative w-[min(300px,100%)] min-w-[280px] min-h-10 max-h-15 flex items-center tracking-wider rounded-full font-semibold;
+
+    span {
+        @apply absolute left-4 z-10 text-amber-300 mt-0.5;
+    }
+
+    input {
+        @apply w-full h-full pe-4 border-3 border-amber-200 outline-0 rounded-full indent-12 text-amber-100 bg-transparent opacity-90;
+    }
+
+    label {
+        @apply absolute z-10 left-12 top-[50%] bg-transparent text-amber-100 cursor-pointer;
+        transform: translate(0%, -50%);
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        transition: all 0.4s;
+        @apply scale-80 text-sm font-bold -top-2 left-5 bg-amber-200 text-stone-900 px-2.5 rounded-t-xl;
+    }
+
+    input:focus+label::before,
+    input:not(:placeholder-shown)+label::before {
+        content: "";
+        background-color: inherit;
+        clip-path: path("M 0,10 A 20,15 0,0,0 10,0 L 10,10 L 0,10 Z");
+        @apply absolute bottom-0 w-[10px] h-[10px] left-[-8.8px];
+
+    }
+
+    input:focus+label::after,
+    input:not(:placeholder-shown)+label::after {
+        content: "";
+        background-color: inherit; 
+        clip-path: path("M 0,0 A 30,15 0,0,0 10,10 L 0,10 L 0,0 Z");   
+        @apply absolute bottom-0 w-[10px] h-[10px] right-[-8.8px];
+    }
+}
+/* .gokUI-inputTag type3 */
+.gokUI-inputTag.type3 {
+    @apply relative w-[min(300px,100%)] min-w-[280px] min-h-10 max-h-15 flex items-center tracking-wider rounded-full font-semibold;
+
+    span {
+        @apply absolute left-4 z-10 text-neutral-500 mt-0.5;
+    }
+
+    input {
+        @apply w-full h-full pe-4 border-0 border-b-3 border-neutral-500 outline-0 rounded-sm indent-12 text-neutral-700 bg-transparent opacity-90;
+    }
+
+    label {
+        @apply absolute z-10 left-12 top-[50%] bg-transparent text-neutral-500 cursor-pointer;
+        transform: translate(0%, -50%);
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        transition: all 0.4s;
+        @apply scale-80 text-sm top-0 left-5 bg-transparent text-neutral-500 px-2.5 rounded-full;
+    }
+}
+/* .gokUI-inputTag type4 */
+.gokUI-inputTag.type4 {
+    @apply relative w-[min(300px,100%)] min-w-[280px] min-h-10 max-h-15 flex flex-col-reverse items-center tracking-wider rounded font-semibold;
+
+    span {
+        @apply absolute left-8 top-[50%] translate-[-50%] z-10 text-neutral-500 mt-0.5;
+    }
+
+    input {
+        @apply w-full min-h-full pe-4 border-double border-8 border-neutral-500 outline-0 rounded-full indent-12 text-neutral-700 opacity-90;
+    }
+
+    label {
+        @apply relative self-start scale-90 ms-4 z-10 bg-transparent text-neutral-500 cursor-pointer;
+    }
+}
+/* gokUI-inputTag Sizing */
+.gokUI-inputTag[data-size="sm"] {
+    @apply h-10;
+}
+
+.gokUI-inputTag[data-size="md"] {
+    @apply h-11;
+}
+
+.gokUI-inputTag[data-size="lg"] {
+    @apply h-12 text-[17px];
+}
+
+.gokUI-inputTag[data-size="xl"] {
+    @apply h-13 text-lg;
+}
+
+.gokUI-inputTag[data-size="2xl"]  {
+    @apply h-14 text-xl;
+}
+
+.gokUI-inputTag[data-size="3xl"]  {
+    @apply h-15 text-xl;
+}
+/* gokUI-textareas */
+.gokUI-textarea {
+    @apply relative w-80 min-w-[280px] h-auto flex items-center tracking-wider font-semibold text-neutral-500;
+
+    span {
+        @apply absolute left-3.5 top-3.5 z-[99] text-amber-300;
+    }
+
+    label {
+        @apply absolute top-2.5 left-12 text-amber-100;
+    }
+
+    textarea::-webkit-scrollbar{
+        display: none;
+        @apply absolute z-[99];
+    }
+
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label{
+        transition: all 0.4s;
+        border-radius: 10px 10px 0 0;
+        @apply font-bold top-[-16px] left-[10px] scale-80 px-2.5 text-sm bg-amber-200 text-neutral-900;
+    }
+
+    textarea:focus+label::before,
+    textarea:not(:placeholder-shown)+label::before {
+        content: "";
+        background-color: inherit;
+        clip-path: path("M 0,10 A 20,15 0,0,0 10,0 L 10,10 L 0,10 Z");
+        @apply absolute bottom-0 w-[10px] h-[10px] left-[-8.8px];
+
+    }
+
+    textarea:focus+label::after,
+    textarea:not(:placeholder-shown)+label::after {
+        content: "";
+        background-color: inherit; 
+        clip-path: path("M 0,0 A 30,15 0,0,0 10,10 L 0,10 L 0,0 Z");
+        @apply absolute bottom-0 w-[10px] h-[10px] right-[-8.8px];
+    }
+    
+}
+/* gokUI-textarea type1 */
+.gokUI-textarea.type1 {
+    textarea {
+        @apply w-full min-h-20 max-h-40 border-3 border-neutral-500 rounded-lg outline-0 indent-8 p-1 pt-1.5 text-neutral-700 bg-stone-100;
+    }
+
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label{
+        transition: all 0.4s;
+        @apply top-[-10px] left-[10px] scale-80 px-2.5 text-sm bg-neutral-500 text-slate-50 rounded-full;
+    }
+
+    textarea+label::after,
+    textarea+label::after,
+    textarea+label::before,
+    textarea+label::before{
+        all: unset;
+    }
+}
+/* gokUI-textarea type2 */
+.gokUI-textarea.type2 {
+    textarea {
+        @apply w-full min-h-20 max-h-40 border-3 border-amber-200 rounded-lg outline-0 indent-8 p-1 pt-1.5 text-amber-100 bg-transparent opacity-90;
+    }
+}
+/* gokUI-textarea type3 */
+.gokUI-textarea.type3 {
+    textarea {
+        @apply w-full min-h-20 max-h-40 border-3 border-neutral-500 rounded-lg outline-0 indent-8 p-1 pt-1.5 text-neutral-700 bg-stone-100;
+    }
+
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label{
+        transition: all 0.4s;
+        border-radius: 10px 10px 0 0;
+        @apply top-[-16px] left-[10px] scale-80 px-25 text-sm bg-neutral-500 text-slate-50;
+    }
+}
+/* gokUI-textarea type4 */
+.gokUI-textarea.type4 {
+    textarea {
+        @apply w-full min-h-20 max-h-40 border-3 border-dashed border-neutral-500 rounded-lg outline-0 indent-8 p-1 pt-1.5 text-neutral-700;
+    }
+}
+/* gokUI-textarea type5 */
+.gokUI-textarea.type5 {
+    textarea {
+        @apply w-full min-h-20 max-h-40 border-6 border-double border-neutral-500 rounded-lg outline-0 indent-6.5 p-1 pt-[4px] text-neutral-700;
+    }
+}
+/* gokUI-textarea sizing */
+.gokUI-textarea[data-size="sm"]>textarea {
+    @apply h-20;
+}
+.gokUI-textarea[data-size="md"]>textarea {
+    @apply h-30;
+}
+.gokUI-textarea[data-size="lg"]>textarea {
+    @apply h-40;
+}
+/* gokUI-toggle Inputs */
+.gokUI-toggle {
+    @apply relative w-auto h-auto flex rounded-full scale-100;
+
+    input {
+        display: none;
+    }
+
+    label {
+        @apply w-10 h-6 flex items-center rounded-full shadow-lg cursor-pointer;
+    }
+
+    label::before {
+        content: "";
+        transition: all 0.5s;
+        @apply absolute w-4 h-4 z-10 rounded-full;
+    }
+}
+/* gokUI-toggle type1 */
+.gokUI-toggle.type1 {
+    input:not(:checked) + label {
+        @apply bg-gray-500;
+    }
+
+    input:not(:checked) + label::before {
+        @apply bg-gray-300 translate-x-1;
+    }
+
+    input:checked + label {
+        @apply bg-blue-500;
+    }
+
+    input:checked + label::before {
+        @apply bg-teal-50 translate-x-5;
+        box-shadow: 0 0 3px white;
+    }
+}
+/* gokUI-toggle type2 */
+.gokUI-toggle.type2 {
+    input:not(:checked) + label {
+        @apply border-2 border-gray-500;
+    }
+
+    input:not(:checked) + label::before {
+        @apply bg-gray-500 translate-x-0.5;
+    }
+
+    input:checked + label {
+        @apply border-2 border-blue-500;
+    }
+
+    input:checked + label::before {
+        @apply bg-blue-500 translate-x-4.5;
+    }
+}
+/* gokUI-btns */
+.gokUI-btn{
+    @apply relative flex items-center justify-center overflow-hidden;
+}
+.gokUI-btn:hover::before {
+    content: "";
+    rotate: -60deg;
+    box-shadow: 0 0 20px aliceblue,
+                0 0 80px #0000007b;
+    background-color: rgba(240, 248, 255, 0.65);
+    animation: Btn-Loader-Animation 1.5s ease-in-out infinite;
+    @apply absolute z-[99] left-[-100%] w-full h-[50%];
+}
+/* gokUI-btns types */
+.gokUI-btn.success {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-springgreen-500 border-[1.6px] border-b-4 border-green-700 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.info {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-blue-500 border-[1.6px] border-b-4 border-indigo-800 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.warning {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-amber-400 border-[1.6px] border-b-4 border-amber-700 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.error {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-red-400 border-[1.6px] border-b-4 border-red-700 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.neutral {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-gray-800 text-teal-100 border-[1.6px] border-b-4 border-gray-500 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.peace {
+    @apply min-w-26 px-4 h-11 flex items-center justify-center rounded-full font-semibold bg-teal-100 text-black border-[1.6px] border-b-4 border-gray-900 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+.gokUI-btn.custom {
+    @apply min-w-25 px-4 py-[7.4px] flex items-center justify-center rounded-full font-semibold text-teal-100 border-[1.6px] border-b-4 tracking-wider shadow-lg cursor-pointer active:scale-99 active:translate-[0.4px] active:border-b-3;
+}
+/* gokUI-collapse */
+.gokUI-collapse {
+    @apply relative w-[min(420px,90%)] h-auto flex flex-col items-center rounded-xl overflow-hidden bg-teal-50;
+
+    summary {
+        @apply w-full min-h-15 flex items-center justify-center font-bold bg-amber-300 cursor-pointer;
+    }
+
+    summary > span {
+        @apply absolute z-[99] right-3 p-0 text-xl cursor-pointer;
+    }
+
+    div, p, a, h1, h2, h3, h4, h5, h6 {
+        @apply p-2;
+    }
+}
+.gokUI-collapse[open] > summary > span{
+    rotate: 180deg;
+}
+/* gokUI-accordion */
+.gokUI-accordion {
+    @apply relative w-[min(420px,90%)] h-auto flex flex-col items-center rounded-xl gap-y-1 overflow-hidden bg-teal-50;
+
+    details {
+        @apply relative w-full h-auto flex flex-col items-center overflow-hidden;
+
+        summary {
+            @apply w-full min-h-15 flex flex-col items-center justify-center font-bold bg-amber-300 cursor-pointer;
+        }
+
+        summary > span {
+            @apply absolute right-3 text-xl cursor-pointer;
+        }
+
+        div, p, a, h1, h2, h3, h4, h5, h6 {
+            @apply px-2 py-1;
+        }
+    }
+
+    details[open] > summary > span {
+        @apply rotate-180;
+    }
+}
+.gokUI-dropdown {
+    @apply relative flex flex-col items-center justify-start font-semibold tracking-wider;
+
+    input,
+    input ~ ol {
+        display: none;
+    }
+
+    input + label {
+        @apply flex w-full h-full items-center px-6 py-1 rounded-full border-2 border-b-4 cursor-pointer active:scale-98 bg-teal-100;
+    }
+
+    input:checked ~ ol {
+        list-style: none;
+        @apply absolute flex flex-col mt-13 min-w-35 p-2 z-[99] space-y-1.5 rounded-lg ring-2 shadow-lg text-center bg-teal-50;
+
+        li {
+            color: slateblue;
+            @apply w-full font-semibold text-center rounded-sm cursor-pointer;
+        }
+
+        li:hover {
+            border-left: 3px solid slateblue;
+            border-right: 3px solid slateblue;
+            background-color: rgb(225, 225, 255);
+        }
+
+        li:active {
+            transform: scale(0.96);
+        }
+    }
+
+    input:checked ~ ol::before{
+        content: "";
+        rotate: 180deg;
+        @apply absolute top-[-10px] left-[50%] translate-[-50%] z-10 w-[20px] h-[20px] bg-teal-50;
+        clip-path: path("M 0,0 L 18,0 L 9,12 L 0,0 Z");
+    }
+}
+/* gokUI-confirmationBox */
+.gokUI-confirmationBox {
+    @apply flex flex-col items-center;
+
+    input,
+    input ~ span,
+    input ~ div{
+        display: none;
+    }
+
+    input:checked ~ span {
+        backdrop-filter: blur(100px);
+        transform: translate(-50%, -50%);
+        background-color: rgba(150, 200, 250, 0.4);
+        @apply fixed block inset-[50%] z-[99] w-screen h-screen;
+    }
+    
+    input:checked ~ div {
+        transform: translate(-50%, -50%);
+        @apply fixed inset-[50%] flex flex-col items-center justify-center min-w-[340px] min-h-[160px] max-h-[400px] rounded-lg gap-y-[12px] z-[99] bg-sky-100 ring-4;
+    }
+}
+/* gokUI-menuNavbar */
+.gokUI-menuNavbar {
+    @apply relative flex flex-col items-center;
+
+    input,
+    input ~ ol,
+    input + label > span:last-child {
+        display: none;
+    }
+
+    input + label:active {
+        transform: scale(0.96);
+    }
+
+    input + label {
+        @apply w-[46px] h-[46px] flex flex-col items-center justify-center text-2xl rounded-full border-4 border-indigo-200 cursor-pointer bg-blue-50;
+        box-shadow: inset 0 0 4px rgba(120, 120, 255, 0.9), 0 0 4px #0000003d;
+    }
+
+    input + label:hover::before {
+        content: "Menu";
+        color: aliceblue;
+        border-radius: 40px;
+        background-color: rgba(0, 0, 0, 0.9);
+        @apply absolute flex items-center justify-center top-[-36px] w-[65px] h-[28px] text-[14px] font-semibold;
+    }
+
+    input + label:hover::after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.9);
+        clip-path: path("M 0,0 L 18,0 L 9,12 L 0,0 Z");
+        @apply absolute top-[-12px] w-[18px] h-[12px];
+    }
+
+    input:checked + label > span:first-child {
+        display: none;
+    }
+
+    input:checked + label > span:last-child {
+        display: block;
+    }
+
+    input:checked ~ ol {
+        list-style: none;
+        background-color: aliceblue;
+        box-shadow: 0 0 10px #0000007b;
+        border-radius: 10px 0 10px 10px;
+        @apply absolute flex flex-col items-center top-[20px] right-[150%] min-w-[150px] gap-y-[5px] p-[10px];
+
+        li {
+            color: slateblue;
+            @apply w-full font-semibold text-center rounded-sm cursor-pointer;
+        }
+
+        li:hover {
+            border-left: 3px solid slateblue;
+            border-right: 3px solid slateblue;
+            background-color: rgb(225, 225, 250);
+        }
+
+        li:active {
+            transform: scale(0.96);
+        }
+    }
+
+    input ~ ol::before {
+        content: "";
+        background-color: aliceblue;
+        clip-path: path("M 0,0 L 15,0 L 0,18 L 0,0 Z");
+        @apply absolute top-0 w-[15px] h-[18px] left-[calc(100%-1px)];
+    }
+}
+/* gokUI-skeleton */
+.gokUI-skeleton {
+    background-color: #b2b2b2;
+    @apply relative flex items-center justify-center overflow-hidden;
+}
+/* gokUI-skeleton.type1 */
+.gokUI-skeleton.type1 {
+    animation: Skeleton-Loader-Animation1 1.5s ease-in-out infinite;
+}
+/* gokUI-skeleton.type2 */
+.gokUI-skeleton.type2::before {
+    content: "";
+    rotate: -60deg;
+    transform: scaleX(5);
+    box-shadow: 0 0 20px aliceblue,
+                0 0 80px #0000007b;
+    background-color: rgba(240, 248, 255, 0.65);
+    animation: Skeleton-Loader-Animation2 2.5s ease-in-out infinite;
+    @apply absolute z-[99] -left-[150%] w-full h-[50px];
+}
+/* Skeleton-Loader-Animation1 */
+@keyframes Skeleton-Loader-Animation1 {
+    50% {
+        background-color: rgba(150, 150, 150, 0.9);
+    }
+}
+/* Skeleton-Loader-Animation2 */
+@keyframes Skeleton-Loader-Animation2 {
+    100% {
+        left: 150%;
+    }
+}
+/* Btn-Loader-Animation */
+@keyframes Btn-Loader-Animation {
+    100% {
+        left: 100%;
+    }
+}
