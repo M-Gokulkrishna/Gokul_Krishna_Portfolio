@@ -112,7 +112,7 @@ const ContactPage = () => {
                     </form>
                 </div>
             </main>
-            <footer className="w-full h-[50px] flex flex-col self-end items-center justify-evenly font-bold rounded-t-xl bg-amber-200">
+            <footer className="w-full h-[46px] flex flex-col self-end items-center justify-center font-bold rounded-t-xl bg-amber-200">
                 <p className="inline-flex">{new Date().getFullYear()} copyright&nbsp;<FaRegCopyright className="mt-1 text-lg" />&nbsp;</p>
                 <p>All Rights Reserved by <span className="text-red-400">Gokul Krishna</span></p>
             </footer>
