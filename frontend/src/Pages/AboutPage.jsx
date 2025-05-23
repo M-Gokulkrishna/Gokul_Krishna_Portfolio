@@ -4,9 +4,9 @@ import { useOutletContext } from "react-router-dom";
 const AboutPage = () => {
     const { screenWidth } = useOutletContext();
     return(
-        <div className={`h-[82%] self-end p-2 flex items-center font-bold tracking-wide border-5 border-amber-300 rounded-2xl ${(screenWidth<=960)?"flex-col":""} ${(screenWidth<=500)?"mb-4 w-[95%]":"mb-3 w-[90%]"}`}>
+        <div className={`w-[95%] m-auto p-2 flex items-center font-bold tracking-wide border-5 border-amber-300 rounded-2xl ${(screenWidth<=960)?"flex-col":""} ${(screenWidth<=420)?"min-h-[560px]":"min-h-[500px]"}`}>
             <section className={`relative flex flex-col items-center justify-center py-5 gap-y-4 rounded-xl bg-amber-300 ${(screenWidth<=960)?"w-full min-h-[50%]":"max-w-[50%] h-full"}`}>
-                <a href={import.meta.env.VITE_LINKEDIN_URL} className="absolute top-2.5 right-2 underline underline-offset-2 me-4 text-sky-800 active:scale-95" target="_blank" rel="noopener noreferrer" data-animation="zoom-out-left">LinkedIn</a>
+                <a href={import.meta.env.VITE_LINKEDIN_URL} className="absolute top-2.5 -right-1 underline underline-offset-2 me-4 text-sky-800 active:scale-95" target="_blank" rel="noopener noreferrer" data-animation="zoom-out-left">LinkedIn</a>
                 <span className="w-auto h-auto p-3 rounded-full text-8xl shadow-2xl ring-5 bg-cyan-300" data-animation="zoom-in"><FaGraduationCap /></span>
                 <h1 className="text-sm sm:text-[16px] text-justify px-5 sm:px-15" data-animation="fade-up">
                     An aspiring and passionate MERN stack web developer. 

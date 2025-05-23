@@ -6,7 +6,7 @@ import ProjectPage from './Pages/ProjectPage';
 import ContactPage from './Pages/ContactPage';
 import { ToastContainer } from 'react-toastify';
 import MainLayout from './AppLayouts/MainLayout';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 // 
 const App = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -24,6 +24,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainLayout screenWidth={screenWidth} />}>
+            <Route index element={<Navigate to={"HomePage"} replace />} />
             <Route path='HomePage' element={<HomePage />} />
             <Route path='AboutPage' element={<AboutPage />} />
             <Route path='SkillPage' element={<SkillPage />} />

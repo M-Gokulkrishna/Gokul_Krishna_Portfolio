@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import ProfilePic from '../assets/Images/Profile_Pic.jpg';
 import ResumeFile from '../assets/Files/Gokul_Krishna_Resume.pdf';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
 // 
 const HomePage = () => {
     const { NavigateTo, screenWidth } = useOutletContext();
@@ -17,15 +17,15 @@ const HomePage = () => {
     }, []);
     // 
     return(
-        <div className={`relative w-[90%] h-[85%] min-w-[280px] self-end flex items-center justify-between font-semibold tracking-wider ${(screenWidth<=700)?"flex-col":""}`}>
+        <div className={`relative w-[90%] min-h-[500px] min-w-[280px] m-auto flex items-center justify-between font-semibold tracking-wider ${(screenWidth<=700)?"flex-col gap-y-5":""}`}>
             <section className={`flex items-center justify-center ${(screenWidth<=700)?"w-full min-h-[50%]":"min-w-[40%] h-full"}`}>
-                <img src={ProfilePic} alt="#profilePic" data-animation={`${(screenWidth<=700)?"zoom-in":"fade-right"}`} className='w-50 h-65 sm:w-57.5 sm:h-75 mt-4 sm:mt-0 ring-5 ring-offset-5 ring-offset-black ring-amber-300 shadow-2xl rounded-full' style={{ "--gokAOS-Duration": "1.8s" }} />
+                <img src={ProfilePic} alt="#profilePic" data-animation={`${(screenWidth<=700)?"zoom-in":"fade-right"}`} className='w-50 h-65 sm:w-58 sm:h-75 mt-4 sm:mt-0 ring-5 ring-offset-5 ring-offset-black ring-amber-300 shadow-2xl rounded-full' style={{ "--gokAOS-Duration": "1.8s" }} />
             </section>
             <section className={`flex flex-col items-start justify-center gap-y-3 ms-3 sm:ms-10 text-amber-100 ${(screenWidth<=700)?"w-full min-h-[50%]":"min-w-[60%] h-full"}`}>
-                <h1 className='text-[26px]' data-animation="fade-up" style={{ "--gokAOS-Delay": "0.3s" }}>Hello, Everyone!</h1>
-                <h2 className='text-2xl font-bold tracking-widest' data-animation={(TextAnimationFlag)?"Text-Typing-Effect":"fade-up"} style={{ "--gokAOS-Delay": "0.6s" }}>I'm <span className='text-amber-300'>Gokul Krishna-M</span></h2>
+                <h1 className='text-2xl' data-animation="fade-up" style={{ "--gokAOS-Delay": "0.3s" }}>Hello, Everyone!</h1>
+                <h2 className='text-2xl font-bold scale-y-105 tracking-widest' data-animation={(TextAnimationFlag)?"Text-Typing-animation":"fade-up"} style={{ "--gokAOS-Delay": "0.6s" }}>I'm <span className='text-amber-300'>Gokul Krishna-M</span></h2>
                 <h3 className='text-md sm:text-lg sm:w-[80%]' data-animation="fade-up" style={{ "--gokAOS-Delay": "0.9s" }}>This is my official portfolio website to showcase my works related to my skills.</h3>
-                <div className='w-full h-auto flex items-center gap-x-6 sm:mt-1'>
+                <div className='w-full h-auto flex items-center gap-x-6 -ms-0.5 sm:mt-1'>
                     <button className="gokUI-btn custom bg-amber-300 border-amber-600" data-animation="zoom-in" style={{ "--gokAOS-Delay": "1s" }}><a href={ResumeFile} download className='font-bold text-gray-900'>Resume</a></button>
                     <div className='flex gap-x-6'>
                         <span className='w-8 h-8 ring-3 ring-amber-300 text-xl scale-110 rounded-full active:scale-105 text-amber-300' data-animation="fade-left" style={{ "--gokAOS-Delay": "1.1s" }}>

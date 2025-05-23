@@ -65,55 +65,55 @@ const ContactPage = () => {
     }
     // 
     return (
-        <div className="relative w-full h-[85%] flex flex-col items-center justify-between self-end tracking-wider">
-            <main className={`w-full min-h-[calc(100%-50px)] flex flex-col items-center`}>
-                <div className={`w-full h-[100px] flex flex-col gap-y-2 items-center justify-center`}>
-                    <p className="inline-flex items-center text-xl font-bold text-amber-100" data-animation="fade-down" style={{ "--gokAOS-Delay": "0.2s" }}><FaHandshake className="text-3xl mt-0.5 text-amber-400" />&nbsp;Keep touch with me&nbsp;<FaHandshake className="text-3xl mt-0.5 text-amber-400" /></p>
+        <div className={`relative w-full m-auto flex flex-col items-center justify-between tracking-wider ${(screenWidth<=580)?"min-h-[560px]":"min-h-[500px]"}`}>
+            <main className={`w-full h-full flex flex-col items-center justify-between`}>
+                <div className={`w-full h-[100px] flex flex-col gap-y-3 items-center justify-center`}>
+                    <p className="inline-flex items-center text-xl font-bold text-amber-100" data-animation="fade-down" style={{ "--gokAOS-Delay": "0.3s" }}><FaHandshake className="text-3xl mt-0.5 text-amber-400" />&nbsp;Keep touch with me&nbsp;<FaHandshake className="text-3xl mt-0.5 text-amber-400" /></p>
                     <div className="flex gap-x-6">
-                        <span className="w-10 h-10 text-2xl rounded-full overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.6s" }}>
+                        <span className="w-10 h-10 text-2xl rounded-full overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.3s" }}>
                             <a href={import.meta.env.VITE_GITHUB_URL} target="_blank" rel="noopener noreferrer" className='w-full h-full flex'><FaGithub className='m-auto' /></a>
                         </span>
                         <span className="w-10 h-10 text-2xl rounded-full overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.6s" }}>
                             <a href={import.meta.env.VITE_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className='w-full h-full flex'><FaLinkedin className='m-auto' /></a>
                         </span>
-                        <span className="flex w-10 h-10 text-2xl rounded-full cursor-pointer overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.6s" }}>
+                        <span className="flex w-10 h-10 text-2xl rounded-full cursor-pointer overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.9s" }}>
                             <FaEnvelope className='m-auto' />
                         </span>
-                        <span className="flex w-10 h-10 text-2xl rounded-full cursor-no-drop overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "0.6s" }}>
+                        <span className="flex w-10 h-10 text-2xl rounded-full cursor-no-drop overflow-hidden active:scale-95 hover:bg-amber-100 bg-amber-300" data-animation="zoom-out" style={{ "--gokAOS-Delay": "1.2s" }}>
                             <FaInstagram className='m-auto' />
                         </span>
                     </div>
                 </div>
                 <div className={`w-full min-h-[calc(100%-100px)] flex items-center justify-center`}>
-                    <form className={`h-full flex flex-col items-center justify-center ${(screenWidth <= 580) ? "w-[85%]" : "w-auto"}`} onSubmit={handleSendMessage}>
-                        <div className={`w-full flex items-center gap-x-2 my-6 ${(screenWidth <= 580) ? "flex-col gap-y-6" : "flex-row"}`}>
-                            <fieldset className="gokUI-inputTag type2" data-size="md" style={{ width: `${(screenWidth <= 580) ? "90%" : "280px"}`, "--gokAOS-Delay": "0.3s" }} data-animation="fade-right">
+                    <form className={`h-full flex flex-col items-center justify-center gap-y-6 ${(screenWidth <= 580) ? "w-[85%]" : "w-fit"}`} onSubmit={handleSendMessage}>
+                        <div className={`w-full flex items-center gap-x-2 ${(screenWidth <= 580) ? "flex-col gap-y-6" : "flex-row"}`}>
+                            <fieldset className="gokUI-inputTag type2" data-size="md" style={{ width: `${(screenWidth <= 420) ? "100%" : (screenWidth <= 580) ? "90%" : "280px"}`, "--gokAOS-Delay": "0.3s" }} data-animation="fade-right">
                                 <span><FaUserAlt /></span>
                                 <input type="text" name="visitorName" id="visitorName" placeholder="" value={mailDetails.visitorName} onChange={(e) => setMailDetails(previousDetails => ({ ...previousDetails, [e.target.name]: e.target.value }))} style={(errorIndicator === "visitorName") ? { borderColor: "orangered" } : {}} />
                                 <label htmlFor="visitorName">Enter name</label>
                             </fieldset>
-                            <fieldset className="gokUI-inputTag type2" data-size="md" style={{ width: `${(screenWidth <= 580) ? "90%" : "280px"}`, "--gokAOS-Delay": "0.3s" }} data-animation="fade-left">
+                            <fieldset className="gokUI-inputTag type2" data-size="md" style={{ width: `${(screenWidth <= 420) ? "100%" : (screenWidth <= 580) ? "90%" : "280px"}`, "--gokAOS-Delay": "0.3s" }} data-animation="fade-left">
                                 <span><FaUserAlt /></span>
                                 <input type="email" name="visitorEmail" id="visitorEmail" placeholder="" value={mailDetails.visitorEmail} onChange={(e) => setMailDetails(previousDetails => ({ ...previousDetails, [e.target.name]: e.target.value }))} style={(errorIndicator === "visitorEmail") ? { borderColor: "orangered" } : {}} />
                                 <label htmlFor="visitorEmail">Enter email</label>
                             </fieldset>
                         </div>
-                        <fieldset className="gokUI-inputTag type2 mb-6" data-size="md" style={{ width: `${(screenWidth <= 580) ? "90%" : "100%"}`, "--gokAOS-Delay": "0.6s" }} data-animation="zoom-out">
+                        <fieldset className="gokUI-inputTag type2" data-size="md" style={{ width: `${(screenWidth <= 420) ? "100%" : (screenWidth <= 580) ? "90%" : "100%"}`, "--gokAOS-Delay": "0.6s" }} data-animation="zoom-out">
                             <span><FaPenAlt /></span>
                             <input type="text" name="visitorSubject" id="visitorSubject" placeholder="" value={mailDetails.visitorSubject} onChange={(e) => setMailDetails(previousDetails => ({ ...previousDetails, [e.target.name]: e.target.value }))} style={(errorIndicator === "visitorSubject") ? { borderColor: "orangered" } : {}} />
                             <label htmlFor="visitorSubject">Write subject</label>
                         </fieldset>
-                        <fieldset className="gokUI-textarea type2 mb-2" data-size="md" style={{ width: `${(screenWidth <= 580) ? "90%" : "100%"}`, "--gokAOS-Delay": "0.9s" }} data-animation="zoom-out-up">
+                        <fieldset className="gokUI-textarea type2" data-size="md" style={{ width: `${(screenWidth <= 420) ? "100%" : (screenWidth <= 580) ? "90%" : "100%"}`, "--gokAOS-Delay": "0.9s" }} data-animation="zoom-out-up">
                             <span><FaBook /></span>
                             <textarea name="visitorMessage" id="visitorMessage" placeholder="" value={mailDetails.visitorMessage} onChange={(e) => setMailDetails(previousDetails => ({ ...previousDetails, [e.target.name]: e.target.value }))} style={(errorIndicator === "visitorMessage") ? { borderColor: "orangered" } : {}} />
                             <label htmlFor="visitorMessage">Write message. . .</label>
                         </fieldset>
-                        <input type="submit" value="Send email" className='gokUI-btn warning' data-animation="fade-up" style={{ "--gokAOS-Delay": "1.4s" }} />
+                        <input type="submit" value="Send email" className='gokUI-btn warning -translate-y-2' data-animation="fade-up" style={{ "--gokAOS-Delay": "1.4s" }} />
                     </form>
                 </div>
             </main>
-            <footer className="w-full h-[46px] flex flex-col self-end items-center justify-center font-bold rounded-t-xl bg-amber-200">
-                <p className="inline-flex">{new Date().getFullYear()} copyright&nbsp;<FaRegCopyright className="mt-1 text-lg" />&nbsp;</p>
+            <footer className="fixed bottom-0 left-0 w-full h-[42px] text-sm flex flex-col self-end items-center justify-center font-bold rounded-t-xl bg-amber-200">
+                <p className="inline-flex">{new Date().getFullYear()} copyright&nbsp;<FaRegCopyright className="mt-[2.5px] text-md" />&nbsp;</p>
                 <p>All Rights Reserved by <span className="text-red-400">Gokul Krishna</span></p>
             </footer>
         </div>

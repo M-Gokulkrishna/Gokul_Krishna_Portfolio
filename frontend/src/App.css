@@ -34,7 +34,7 @@ body {
     }
 }
 
-[data-animation="Text-Typing-Effect"] {
+[data-animation="Text-Typing-animation"] {
     @apply w-[45px] h-auto text-nowrap overflow-x-hidden border-r-3 border-amber-200;
     animation: Text-Typing-animation 3s steps(90) infinite;
 }

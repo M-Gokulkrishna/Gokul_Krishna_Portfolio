@@ -106,7 +106,7 @@ const ProjectPage = () => {
     }
     // 
     return (
-        <div className={`relative w-[90%] h-[80%] mb-2 flex items-center justify-center self-end tracking-wide rounded-4xl overflow-hidden ${(screenWidth)}`}>
+        <div className={`relative w-[90%] min-h-[500px] m-auto flex items-center justify-center tracking-wide rounded-4xl overflow-hidden ${(screenWidth)}`}>
             <div style={{ width: `${SlideWidth}px`, height: `${SlideHeight}px` }}>
                 <div className={`flex gap-x-15 bg-red-30`} style={{ width: `${(SlideWidth * carouselSlides.length)}px`, height: `${SlideHeight}px`, transition: slidesTrackTransition, transform: `translateX(-${slideTrackMovement}px)` }}>
                     {
